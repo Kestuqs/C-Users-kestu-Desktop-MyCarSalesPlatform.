@@ -1,0 +1,164 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "MyCarSalesPlatform.API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Listings": {
+      "get": {
+        "tags": [
+          "Listings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Listings"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Listing"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Listing"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Listing"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Listings/{id}": {
+      "get": {
+        "tags": [
+          "Listings"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Listings"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Listing": {
+        "required": [
+          "Kaina",
+          "Pavadinimas"
+        ],
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Pavadinimas": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "Aprasymas": {
+            "type": "string",
+            "nullable": true
+          },
+          "Kaina": {
+            "type": "number",
+            "format": "double"
+          },
+          "Marke": {
+            "type": "string",
+            "nullable": true
+          },
+          "Modelis": {
+            "type": "string",
+            "nullable": true
+          },
+          "Metai": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Rida": {
+            "type": "string",
+            "nullable": true
+          },
+          "Spalva": {
+            "type": "string",
+            "nullable": true
+          },
+          "Variklis": {
+            "type": "string",
+            "nullable": true
+          },
+          "KuroTipas": {
+            "type": "string",
+            "nullable": true
+          },
+          "PavarųDėžė": {
+            "type": "string",
+            "nullable": true
+          },
+          "Nuotraukos": {
+            "type": "string",
+            "nullable": true
+          },
+          "Sukurtas": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

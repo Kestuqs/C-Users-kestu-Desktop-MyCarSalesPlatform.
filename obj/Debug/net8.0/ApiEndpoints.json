@@ -1,0 +1,60 @@
+[
+  {
+    "ContainingType": "MyCarSalesPlatform.API.Controllers.ListingsController",
+    "Method": "Get",
+    "RelativePath": "api/Listings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyCarSalesPlatform.API.Controllers.ListingsController",
+    "Method": "Create",
+    "RelativePath": "api/Listings",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "listing",
+        "Type": "MyCarSalesPlatform.Core.Models.Listing",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyCarSalesPlatform.API.Controllers.ListingsController",
+    "Method": "Get",
+    "RelativePath": "api/Listings/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyCarSalesPlatform.API.Controllers.ListingsController",
+    "Method": "Delete",
+    "RelativePath": "api/Listings/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
